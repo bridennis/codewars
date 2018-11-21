@@ -1,16 +1,19 @@
 <?php
 
-class UniqueInOrder
+/*
+ * @url https://www.codewars.com/kata/unique-in-order/train/php
+ */
+
+class TrainUniqueInOrder
 {
-    public function uniqueInOrder($iterable){
+    public static function uniqueInOrder($iterable){
         $ret = [];
         if (is_string($iterable)) {
-            $iterable = str_split($iterable);
+            $iterable = empty($iterable) ? [] : str_split($iterable);
         }
-        for ($i = 0, $max = count($iterable); $i < $max; $i++) {
-            if ($iterable[$i] !== current($ret)) {
-                $ret[] = $iterable{$i};
-                end($ret);
+        foreach ($iterable as $value) {
+            if ($value !== end($ret)) {
+                $ret[] = $value;
             }
         }
         return $ret;

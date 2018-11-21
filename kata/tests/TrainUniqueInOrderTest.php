@@ -1,13 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: bridennis
- * Date: 21.11.18
- * Time: 21:54
- */
 
+use PHPUnit\Framework\TestCase;
 
-class TrainUniqueInOrderTest extends PHPUnit_Framework_TestCase
+class TrainUniqueInOrderTest extends TestCase
 {
 
+    public function testUniqueInOrder()
+    {
+        $this->assertEquals(['A', 'B', 'C', 'D', 'A', 'B'], TrainUniqueInOrder::uniqueInOrder('AAAABBBCCDAABBB'));
+        $this->assertEquals([1,2,3], TrainUniqueInOrder::uniqueInOrder([1,2,2,3,3]));
+        $this->assertEquals([], TrainUniqueInOrder::uniqueInOrder(''));
+        $this->assertEquals([], TrainUniqueInOrder::uniqueInOrder([]));
+    }
 }
