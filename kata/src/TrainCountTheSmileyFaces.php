@@ -4,9 +4,12 @@
  * @url https://www.codewars.com/kata/count-the-smiley-faces/train/php
  */
 
+namespace codewars\kata;
+
 class TrainCountTheSmileyFaces
 {
-    public static function count_smileys($arr): int {
+    public static function countSmileys($arr) : int
+    {
         $count = 0;
         foreach ($arr as $item) {
             if (preg_match('/^[:;][-~]?[\)D]$/', $item)) {
@@ -14,5 +17,12 @@ class TrainCountTheSmileyFaces
             }
         }
         return $count;
+    }
+
+    // --- Below are the Best Code Practices ---
+
+    public static function bestPracticesCountSmileys($arr): int
+    {
+        return preg_match_all("/[:;][-~]?[\)D]/", implode(",", $arr));
     }
 }
