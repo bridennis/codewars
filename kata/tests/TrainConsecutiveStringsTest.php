@@ -30,8 +30,8 @@ class TrainConsecutiveStringsTest extends TestCase
         ), "dddddbbbbcccc");
 
         $this->revTest(TrainConsecutiveStrings::longestConsec(
-            ["wlwsasphmxxowiaxujylentrklctozmymu"],
-            1
+            ["wlwsasphmxx","owiaxujylentrklctozmymu","wpgozvxxiu"],
+            2
         ), "wlwsasphmxxowiaxujylentrklctozmymu");
 
         $this->revTest(TrainConsecutiveStrings::longestConsec([], 3), "");
