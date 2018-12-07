@@ -15,19 +15,27 @@ class TrainConsecutiveStrings
             return '';
         }
 
-        $firstLongestIdx = 0;
-        foreach ($strarr as $key => $item) {
-            if (strlen($item) > strlen($strarr[$firstLongestIdx])) {
-                $firstLongestIdx = $key;
+        $res = '';
+        for ($i = 0, $max = count($strarr); $i < $max; $i++) {
+            $curStr = implode('', array_slice($strarr, $i, $k));
+            if (strlen($curStr) > strlen($res)) {
+                $res = $curStr;
             }
         }
 
-        $lStr = implode(
-            '',
-            array_slice($strarr, $firstLongestIdx - $k + 1 <= 0 ? 0 : $firstLongestIdx - $k + 1, $k)
-        );
-        $rStr = implode('', array_slice($strarr, $firstLongestIdx, $k));
+        return $res;
+    }
 
-        return strlen($lStr) >= strlen($rStr) ? $lStr : $rStr;
+    // --- Below are the Best Code Practices ---
+
+    function bestPracticesLongestConsec($strarr, $k) {
+        $longest = '';
+        if ($k > 0) {
+            for ($i = 0; $i < count($strarr) - $k + 1; $i++) {
+                $consecutive = implode('', array_slice($strarr, $i, $k));
+                $longest = strlen($consecutive) > strlen($longest) ? $consecutive : $longest;
+            }
+        }
+        return $longest;
     }
 }

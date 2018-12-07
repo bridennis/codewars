@@ -35,33 +35,19 @@ class TrainConsecutiveStringsTest extends TestCase
         ), "ixoyx3452zzzzzzzzzzzz");
 
         $this->revTest(TrainConsecutiveStrings::longestConsec(
-            ["wzogzvmmzsbnmmnprmkdc", "jwuivjxdkgnvuquovcgginewyuavgpnaaqqnmzkzetozdblpajutetushblzp", "bkbnmdxptgpgxrgpxkgbwxn"],
-            2
-        ), "jwuivjxdkgnvuquovcgginewyuavgpnaaqqnmzkzetozdblpajutetushblzpbkbnmdxptgpgxrgpxkgbwxn");
-
-//: 'jwuivjxdkgnvuquovcgginewyuavgpnaaqqnmzkzetozdblpajutetushblzp bkbnmdxptgpgxrgpxkgbwxn'
-//: 'wzogzvmmzsbnmmnprmkdc jwuivjxdkgnvuquovcgginewyuavgpnaaqqnmzkzetozdblpajutetushblzp'
-
-        $this->revTest(TrainConsecutiveStrings::longestConsec(
-            ["jyteenapx", "bqkjcppxbjqvncclqkjmdfhmtjwcwbxmkgibcbygeakdaunmysmxnxpdminmzbbqdzjcukniplhuaxbojhrplotjxuyxoyzbooxcfbfpkisrnfrjrieyfvoggqgiaclnclovmhvktqnftmfqfxcqcowvabdvzjvwmhozaqktins", "tjauejttjq"],
-            2
-        ), "bqkjcppxbjqvncclqkjmdfhmtjwcwbxmkgibcbygeakdaunmysmxnxpdminmzbbqdzjcukniplhuaxbojhrplotjxuyxoyzbooxcfbfpkisrnfrjrieyfvoggqgiaclnclovmhvktqnftmfqfxcqcowvabdvzjvwmhozaqktinstjauejttjq");
-//: 'bqkjcppxbjqvncclqkjmdfhmtjwcwbxmkgibcbygeakdaunmysmxnxpdminmzbbqdzjcukniplhuaxbojhrplotjxuyxoyzbooxcfbfpkisrnfrjrieyfvoggqgiaclnclovmhvktqnftmfqfxcqcowvabdvzjvwmhozaqktins tjauejttjq'
-//: 'jyteenapx bqkjcppxbjqvncclqkjmdfhmtjwcwbxmkgibcbygeakdaunmysmxnxpdminmzbbqdzjcukniplhuaxbojhrplotjxuyxoyzbooxcfbfpkisrnfrjrieyfvoggqgiaclnclovmhvktqnftmfqfxcqcowvabdvzjvwmhozaqktins'
-
-
-//        Expected: 'ekparrvtzfvgckivjbxvonkwovdxzojhmyxyjinuhrmvtnsnmuujqaeaetgzvipevoctfltsqugfxosnmtntdesjngfmrrwytdgqjlynalyrwbqhhhtsbkvaklictemojvasrcteoojfcpuxomtngzyhtpzthreujbouhhvgcpqcwdxzjnhzdrstwgqjqfzitppljnuqhsnriydrhnthnqdlmvqkvgmeotpmqucfsqkrmllqoewsfuuzrqineflionbwruwdwozdnhfmmqlcmgtoafspshjammoqiodlwjtlzyrfjhwizxqkogdeyzznsniapkmdrlesppipjelabupwmylcoyhptvewkkdrudfvucjrquqnmmegndbjahrmgefznojhawzydqihiovwliyphwnbphrue bhqvsemphue'
-//Actual  : 'vbyrubobzo ekparrvtzfvgckivjbxvonkwovdxzojhmyxyjinuhrmvtnsnmuujqaeaetgzvipevoctfltsqugfxosnmtntdesjngfmrrwytdgqjlynalyrwbqhhhtsbkvaklictemojvasrcteoojfcpuxomtngzyhtpzthreujbouhhvgcpqcwdxzjnhzdrstwgqjqfzitppljnuqhsnriydrhnthnqdlmvqkvgmeotpmqucfsqkrmllqoewsfuuzrqineflionbwruwdwozdnhfmmqlcmgtoafspshjammoqiodlwjtlzyrfjhwizxqkogdeyzznsniapkmdrlesppipjelabupwmylcoyhptvewkkdrudfvucjrquqnmmegndbjahrmgefznojhawzydqihiovwliyphwnbphrue'
-
-        $this->revTest(TrainConsecutiveStrings::longestConsec(
             ["wlwsasphmxx","owiaxujylentrklctozmymu","wpgozvxxiu"],
             2
         ), "wlwsasphmxxowiaxujylentrklctozmymu");
 
         $this->revTest(TrainConsecutiveStrings::longestConsec(
-            ["boat", "shoes", "boat", "shoe"],
+            ["boat", "shoe", "boat", "shoes", "boat"],
             2
         ), "boatshoes");
+
+        $this->revTest(TrainConsecutiveStrings::longestConsec(
+            ["aaa", "bbb", "dd", "eeee"],
+            2
+        ), "aaabbb");
 
         $this->revTest(TrainConsecutiveStrings::longestConsec([], 3), "");
     }
