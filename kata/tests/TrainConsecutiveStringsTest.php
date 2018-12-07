@@ -15,7 +15,7 @@ class TrainConsecutiveStringsTest extends TestCase
     public function testLongestConsec()
     {
         $this->revTest(TrainConsecutiveStrings::longestConsec(
-            ["zone", "abigail", "theta", "form", "libe", "zas"],
+            ["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"],
             2
         ), "abigailtheta");
 
@@ -27,12 +27,41 @@ class TrainConsecutiveStringsTest extends TestCase
         $this->revTest(TrainConsecutiveStrings::longestConsec(
             ["aaa", "bbbb", "cccc", "ddddd"],
             3
-        ), "dddddbbbbcccc");
+        ), "bbbbccccddddd");
+
+        $this->revTest(TrainConsecutiveStrings::longestConsec(
+            ["wkppv", "ixoyx", "3452", "zzzzzzzzzzzz"],
+            3
+        ), "ixoyx3452zzzzzzzzzzzz");
+
+        $this->revTest(TrainConsecutiveStrings::longestConsec(
+            ["wzogzvmmzsbnmmnprmkdc", "jwuivjxdkgnvuquovcgginewyuavgpnaaqqnmzkzetozdblpajutetushblzp", "bkbnmdxptgpgxrgpxkgbwxn"],
+            2
+        ), "jwuivjxdkgnvuquovcgginewyuavgpnaaqqnmzkzetozdblpajutetushblzpbkbnmdxptgpgxrgpxkgbwxn");
+
+//: 'jwuivjxdkgnvuquovcgginewyuavgpnaaqqnmzkzetozdblpajutetushblzp bkbnmdxptgpgxrgpxkgbwxn'
+//: 'wzogzvmmzsbnmmnprmkdc jwuivjxdkgnvuquovcgginewyuavgpnaaqqnmzkzetozdblpajutetushblzp'
+
+        $this->revTest(TrainConsecutiveStrings::longestConsec(
+            ["jyteenapx", "bqkjcppxbjqvncclqkjmdfhmtjwcwbxmkgibcbygeakdaunmysmxnxpdminmzbbqdzjcukniplhuaxbojhrplotjxuyxoyzbooxcfbfpkisrnfrjrieyfvoggqgiaclnclovmhvktqnftmfqfxcqcowvabdvzjvwmhozaqktins", "tjauejttjq"],
+            2
+        ), "bqkjcppxbjqvncclqkjmdfhmtjwcwbxmkgibcbygeakdaunmysmxnxpdminmzbbqdzjcukniplhuaxbojhrplotjxuyxoyzbooxcfbfpkisrnfrjrieyfvoggqgiaclnclovmhvktqnftmfqfxcqcowvabdvzjvwmhozaqktinstjauejttjq");
+//: 'bqkjcppxbjqvncclqkjmdfhmtjwcwbxmkgibcbygeakdaunmysmxnxpdminmzbbqdzjcukniplhuaxbojhrplotjxuyxoyzbooxcfbfpkisrnfrjrieyfvoggqgiaclnclovmhvktqnftmfqfxcqcowvabdvzjvwmhozaqktins tjauejttjq'
+//: 'jyteenapx bqkjcppxbjqvncclqkjmdfhmtjwcwbxmkgibcbygeakdaunmysmxnxpdminmzbbqdzjcukniplhuaxbojhrplotjxuyxoyzbooxcfbfpkisrnfrjrieyfvoggqgiaclnclovmhvktqnftmfqfxcqcowvabdvzjvwmhozaqktins'
+
+
+//        Expected: 'ekparrvtzfvgckivjbxvonkwovdxzojhmyxyjinuhrmvtnsnmuujqaeaetgzvipevoctfltsqugfxosnmtntdesjngfmrrwytdgqjlynalyrwbqhhhtsbkvaklictemojvasrcteoojfcpuxomtngzyhtpzthreujbouhhvgcpqcwdxzjnhzdrstwgqjqfzitppljnuqhsnriydrhnthnqdlmvqkvgmeotpmqucfsqkrmllqoewsfuuzrqineflionbwruwdwozdnhfmmqlcmgtoafspshjammoqiodlwjtlzyrfjhwizxqkogdeyzznsniapkmdrlesppipjelabupwmylcoyhptvewkkdrudfvucjrquqnmmegndbjahrmgefznojhawzydqihiovwliyphwnbphrue bhqvsemphue'
+//Actual  : 'vbyrubobzo ekparrvtzfvgckivjbxvonkwovdxzojhmyxyjinuhrmvtnsnmuujqaeaetgzvipevoctfltsqugfxosnmtntdesjngfmrrwytdgqjlynalyrwbqhhhtsbkvaklictemojvasrcteoojfcpuxomtngzyhtpzthreujbouhhvgcpqcwdxzjnhzdrstwgqjqfzitppljnuqhsnriydrhnthnqdlmvqkvgmeotpmqucfsqkrmllqoewsfuuzrqineflionbwruwdwozdnhfmmqlcmgtoafspshjammoqiodlwjtlzyrfjhwizxqkogdeyzznsniapkmdrlesppipjelabupwmylcoyhptvewkkdrudfvucjrquqnmmegndbjahrmgefznojhawzydqihiovwliyphwnbphrue'
 
         $this->revTest(TrainConsecutiveStrings::longestConsec(
             ["wlwsasphmxx","owiaxujylentrklctozmymu","wpgozvxxiu"],
             2
         ), "wlwsasphmxxowiaxujylentrklctozmymu");
+
+        $this->revTest(TrainConsecutiveStrings::longestConsec(
+            ["boat", "shoes", "boat", "shoe"],
+            2
+        ), "boatshoes");
 
         $this->revTest(TrainConsecutiveStrings::longestConsec([], 3), "");
     }

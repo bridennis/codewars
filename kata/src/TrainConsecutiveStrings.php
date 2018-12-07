@@ -15,24 +15,19 @@ class TrainConsecutiveStrings
             return '';
         }
 
-        $lengthArr = [];
+        $firstLongestIdx = 0;
         foreach ($strarr as $key => $item) {
-            $lengthArr[$item] = strlen($item);
+            if (strlen($item) > strlen($strarr[$firstLongestIdx])) {
+                $firstLongestIdx = $key;
+            }
         }
 
-        $tmp = [];
-        $i = 0;
-        foreach ($lengthArr as $key => $value) {
-            $tmp[] = [$i++, $key, $value];
-        }
-        uasort($tmp, function ($a, $b) {
-            return $a[2] == $b[2] ? ($a[0] - $b[0]) : ($a[2] < $b[2] ? 1 : -1);
-        });
-        $lengthArr = [];
-        foreach ($tmp as $val) {
-            $lengthArr[$val[1]] = $val[2];
-        }
+        $lStr = implode(
+            '',
+            array_slice($strarr, $firstLongestIdx - $k + 1 <= 0 ? 0 : $firstLongestIdx - $k + 1, $k)
+        );
+        $rStr = implode('', array_slice($strarr, $firstLongestIdx, $k));
 
-        return implode('', array_slice(array_keys($lengthArr), 0, $k));
+        return strlen($lStr) >= strlen($rStr) ? $lStr : $rStr;
     }
 }
