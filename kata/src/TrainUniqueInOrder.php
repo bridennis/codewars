@@ -4,7 +4,7 @@
  * @url https://www.codewars.com/kata/unique-in-order/train/php
  */
 
-namespace codewars\kata;
+namespace Codewars\Kata;
 
 class TrainUniqueInOrder
 {

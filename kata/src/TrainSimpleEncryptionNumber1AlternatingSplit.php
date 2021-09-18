@@ -4,7 +4,7 @@
  * @url https://www.codewars.com/kata/simple-encryption-number-1-alternating-split/train/php
  */
 
-namespace codewars\kata;
+namespace Codewars\Kata;
 
 class TrainSimpleEncryptionNumber1AlternatingSplit
 {
@@ -17,9 +17,9 @@ class TrainSimpleEncryptionNumber1AlternatingSplit
                 $eStr = '';
                 for ($i = 0; $i < $max; $i++) {
                     if (($i + 1) % 2 == 0) {
-                        $bStr .= $text{$i};
+                        $bStr .= $text[$i];
                     } else {
-                        $eStr .= $text{$i};
+                        $eStr .= $text[$i];
                     }
                 }
                 $text = $bStr . $eStr;
@@ -37,9 +37,9 @@ class TrainSimpleEncryptionNumber1AlternatingSplit
                 $eStr = substr($text, 0, $max);
                 $text = '';
                 for ($i = 0; $i < $max; $i++) {
-                    $text .= $bStr{$i};
+                    $text .= $bStr[$i];
                     if ($i < strlen($eStr)) {
-                        $text .= $eStr{$i};
+                        $text .= $eStr[$i];
                     }
                 }
             }

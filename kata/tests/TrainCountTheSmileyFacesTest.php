@@ -1,8 +1,9 @@
 <?php
+declare(strict_types=1);
 
-namespace codewars\kata\test;
+namespace Codewars\Kata\Tests;
 
-use codewars\kata\TrainCountTheSmileyFaces;
+use Codewars\Kata\TrainCountTheSmileyFaces;
 use PHPUnit\Framework\TestCase;
 
 class TrainCountTheSmileyFacesTest extends TestCase

@@ -4,7 +4,7 @@
  * @url https://www.codewars.com/kata/count-the-smiley-faces/train/php
  */
 
-namespace codewars\kata;
+namespace Codewars\Kata;
 
 class TrainCountTheSmileyFaces
 {

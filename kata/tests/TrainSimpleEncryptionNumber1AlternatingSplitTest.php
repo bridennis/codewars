@@ -1,8 +1,9 @@
 <?php
+declare(strict_types=1);
 
-namespace codewars\kata\test;
+namespace Codewars\Kata\Tests;
 
-use codewars\kata\TrainSimpleEncryptionNumber1AlternatingSplit;
+use Codewars\Kata\TrainSimpleEncryptionNumber1AlternatingSplit;
 use PHPUnit\Framework\TestCase;
 
 class TrainSimpleEncryptionNumber1AlternatingSplitTest extends TestCase

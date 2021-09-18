@@ -4,7 +4,7 @@
  * @url https://www.codewars.com/kata/consecutive-strings/train/php
  */
 
-namespace codewars\kata;
+namespace Codewars\Kata;
 
 class TrainConsecutiveStrings
 {
