@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Codewars\Kata\Tests;
+namespace Codewars\Kata\Tests\kyu6;
 
-use Codewars\Kata\TrainUniqueInOrder;
+use Codewars\Kata\kyu6\TrainUniqueInOrder;
 use PHPUnit\Framework\TestCase;
 
 class TrainUniqueInOrderTest extends TestCase

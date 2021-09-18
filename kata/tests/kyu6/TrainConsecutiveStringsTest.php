@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Codewars\Kata\Tests;
+namespace Codewars\Kata\Tests\kyu6;
 
-use Codewars\Kata\TrainConsecutiveStrings;
+use Codewars\Kata\kyu6\TrainConsecutiveStrings;
 use PHPUnit\Framework\TestCase;
 
 class TrainConsecutiveStringsTest extends TestCase

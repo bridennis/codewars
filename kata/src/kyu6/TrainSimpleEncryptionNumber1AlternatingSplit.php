@@ -4,7 +4,7 @@
  * @url https://www.codewars.com/kata/simple-encryption-number-1-alternating-split/train/php
  */
 
-namespace Codewars\Kata;
+namespace Codewars\Kata\kyu6;
 
 class TrainSimpleEncryptionNumber1AlternatingSplit
 {

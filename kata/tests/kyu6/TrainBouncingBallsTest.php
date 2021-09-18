@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Codewars\Kata\Tests;
+namespace Codewars\Kata\Tests\kyu6;
 
-use Codewars\Kata\TrainBouncingBalls;
+use Codewars\Kata\kyu6\TrainBouncingBalls;
 use PHPUnit\Framework\TestCase;
 
 final class TrainBouncingBallsTest extends TestCase
