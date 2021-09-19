@@ -15,7 +15,12 @@
             "Codewars\\Kata\\Tests\\": "kata/tests"
         }
     },
-  "require": {
-    "ext-mbstring": "*"
-  }
+    "require": {
+        "ext-mbstring": "*"
+    },
+    "scripts": {
+        "test": [
+            "vendor/phpunit/phpunit/phpunit --colors=always"
+        ]
+    }
 }
